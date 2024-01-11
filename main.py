@@ -57,11 +57,11 @@ def main():
                     if recipient == email:
                         print(f"Message ID: {messageId}")
                         # Download attachments
-                        downloaded_file_paths = helper.download_attachments(messageId, globals.NETS_DOWNLOADS)
+                        downloaded_file_paths = helper.download_attachments(messageId, globals.DOWNLOADS_FOLDER)
 
                         for zip_file_path in downloaded_file_paths:
                             # Unzip attachment and delete zipped file
-                            unzippedFilePath = helper.unzip_password_protected_zip(zip_file_path, password, globals.NETS_DOWNLOADS)
+                            unzippedFilePath = helper.unzip_password_protected_zip(zip_file_path, password, globals.DOWNLOADS_FOLDER)
                             os.remove(zip_file_path)
                             print('Removed zipped file.')
 
@@ -82,7 +82,7 @@ def main():
                     print(e)
                     
         except Exception as e:
-            helper.sendErrorEmail(globals.EXCEPTION_EMAIL_ADDRESS, 'NETS')
+            helper.sendErrorEmail(globals.EXCEPTION_EMAIL_ADDRESS, '')
             print(e)
 
     print("The script has finished running.")
