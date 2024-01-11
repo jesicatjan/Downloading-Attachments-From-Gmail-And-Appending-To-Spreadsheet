@@ -1,5 +1,10 @@
 ###  About
-This set of automation uses gmail API and sheets API to download password-encrypted zipped files from emails of a certain label, (which account details will have to be on a spreadsheet) and then appends the csv data from the zipped file onto the same or a different spreadsheet.
+What this set of automation does:
+- Extract emails from a certain label using Gmail API
+- Download the password-encrypted zipped files from the extracted emails
+- Reads data from Google Sheets using Sheets API
+- Unzip file using password provided in Google Sheet
+- Appends csv data in file onto Spreadsheet
 
 ### Setup
 
