@@ -1,5 +1,3 @@
-# EKO-NETS
-
 ###  About
 This set of automation mainly uses gmail API and sheets API to download password-encrypted zipped files from emails of a certain label, (which account details will have to be on a spreadsheet) and then appends the csv data from the zipped file onto the same or a different spreadsheet.
 
